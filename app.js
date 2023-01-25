@@ -2,9 +2,11 @@ $("form").
 on("submit", function(evt)
 {evt.preventDefault();
 searchGiphy($("input").val());
-
+$("input").val("")
 
 });
+
+
 
 async function searchGiphy(word){
     const res = await axios.get(`https://api.giphy.com/v1/gifs/search?api_key=cV0tlNG65o5QnWVuGhhVMafKo3BpeeHT&q=${word}`);
