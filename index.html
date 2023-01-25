@@ -4,18 +4,27 @@
 <head>
   <meta charset="UTF-8">
   <title>Giphy Party!</title>
+  <link rel="stylesheet" href="https://bootswatch.com/4/solar/bootstrap.min.css" >
+  <link rel="stylesheet" href="app.css">
 </head>
 
 <body>
-  <form action="">
-  <label for="giphy"></label>
-  <input type="text" id="giphy" name="giphy" placeholder="enter your desired giphy">
-<button type="submit" id="search">Search Giphy!</button>
+  <h1>GIPHY PARTY</h1>
+  <div id="form">
+    <form class="form-control-lg"action="">
+      <label for="giphy"></label>
+      <input "type="text" id="giphy" name="giphy" placeholder="enter your desired giphy">
+    <button class="btn btn-danger"type="submit" id="search">Search Giphy!</button>
+  
+    <button class="btn btn-warning"id="remove">Remove Giphy</button></div>
+  
 </form>
-<button id="remove">Remove Giphy</button>
-<div id="giphies">
+<div class="container-fluid ">
+<div id="giphies" class="row d-flex justify-content-around">
 
 </div>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>

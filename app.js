@@ -12,12 +12,15 @@ async function searchGiphy(word){
     const res = await axios.get(`https://api.giphy.com/v1/gifs/search?api_key=cV0tlNG65o5QnWVuGhhVMafKo3BpeeHT&q=${word}`);
     const myGiph = res.data.data[Math.floor(Math.random()*(res.data.data.length))].images.original.url;
 
-    // const giphy = document.createElement('div');
+    const giphy = document.createElement('div');
+    giphy.class = "col-4";
+
     const img = document.createElement('img');
-    img.src = myGiph;
+img.src = myGiph;
+
     giphy.append(img);
-    $('#giphies').append(img);
-    console.log(img.src);
+    $('#giphies').append(giphy);
+    console.log($('#giphies'));
 
 
 }
